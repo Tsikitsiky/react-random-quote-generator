@@ -1,27 +1,14 @@
-# Random Quote Generator in React
-
-Challenge: Create a quote generator app, and use React to handle the frontend. Don’t look at the existing solution. Fulfill user stories below:
-
-![image](./assets/quote1.png)
-![image](./assets/quote2.png)
-
--   User story: I can see a random quote
--   User story: I generate a new random quote
--   User story: When I select quote author, I can see a list of quotes from them
--   User story: I can see quote genre under the author
-
-
 <!-- Please update value in the {}  -->
 
 <h1 align="center">React Random Quote</h1>
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://random-quote-rs.netlify.app/other">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/Tsikitsiky/react-random-quote-generator">
       Solution
     </a>
   </h3>
