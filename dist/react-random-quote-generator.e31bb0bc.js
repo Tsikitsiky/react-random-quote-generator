@@ -33921,61 +33921,63 @@ function App() {
   const [quote, setQuote] = (0, _react.useState)([]);
   const [author, setAuthor] = (0, _react.useState)('');
   const [genre, setGenre] = (0, _react.useState)('');
+  const [quotes, setQotes] = (0, _react.useState)([]);
+  const API = 'https://quote-garden.herokuapp.com/api/v2/quotes/random';
+  const api = `https://quote-garden.herokuapp.com/api/v2/authors/${author}/?page=1&limit=10`; //fetch a random quote
+
+  async function getQuote() {
+    const res = await fetch(API);
+    const data = await res.json(); //console.log(data.quote)
+
+    setQuote(data.quote.quoteText);
+    setAuthor(data.quote.quoteAuthor);
+    setGenre(data.quote.quoteGenre);
+  } //fetch the quotes from an author
+
+
+  async function getQuotes() {
+    const res = await fetch(api);
+    const data = await res.json();
+    setQotes(data.quotes);
+  } //refresh
+
+
+  function newQuote() {
+    getQuote();
+    getQuotes();
+  }
+
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/other"
+    path: "/more-quotes-from-:author"
   }, /*#__PURE__*/_react.default.createElement(_otherQuotes.default, {
     render: function () {
       console.log(author);
-      const [quotes, setQotes] = (0, _react.useState)([]);
-      const api = `https://quote-garden.herokuapp.com/api/v2/authors/${author}/?page=1&limit=10`;
-
-      async function getQuotes() {
-        const res = await fetch(api);
-        const data = await res.json();
-        setQotes(data.quotes);
-      }
-
       (0, _react.useEffect)(() => {
         getQuotes();
       }, []);
       console.log(quotes);
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/"
-      }, /*#__PURE__*/_react.default.createElement("button", {
-        className: "refresh"
-      }, "random")), /*#__PURE__*/_react.default.createElement("h1", null, author), /*#__PURE__*/_react.default.createElement("div", null, quotes.map(quote => /*#__PURE__*/_react.default.createElement("p", {
-        key: quote.id
+      }, /*#__PURE__*/_react.default.createElement("button", null, " Back")), /*#__PURE__*/_react.default.createElement("button", {
+        className: "refresh",
+        onClick: newQuote
+      }, "random"), /*#__PURE__*/_react.default.createElement("h1", null, author), /*#__PURE__*/_react.default.createElement("div", null, quotes.map(quote => /*#__PURE__*/_react.default.createElement("p", {
+        key: quote._id
       }, "\"", quote.quoteText, "\""))));
     }
   })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/"
   }, /*#__PURE__*/_react.default.createElement(_qoute.default, {
     render: function () {
-      const API = 'https://quote-garden.herokuapp.com/api/v2/quotes/random';
-
-      async function getQuote() {
-        const res = await fetch(API);
-        const data = await res.json(); //console.log(data.quote)
-
-        setQuote(data.quote.quoteText);
-        setAuthor(data.quote.quoteAuthor);
-        setGenre(data.quote.quoteGenre);
-      }
-
       (0, _react.useEffect)(() => {
         getQuote();
-      }, []);
-
-      function newQuote() {
-        getQuote();
-      } //console.log(quote)
-
+      }, []); //console.log(quote)
 
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
         onClick: newQuote,
         className: "refresh"
       }, "random"), /*#__PURE__*/_react.default.createElement("p", null, "\"", quote, "\""), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-        to: "/other"
+        to: `/more-quotes-from-${author}`
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "button-next"
       }, /*#__PURE__*/_react.default.createElement("p", null, author), /*#__PURE__*/_react.default.createElement("span", null, genre))));
