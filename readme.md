@@ -10,23 +10,10 @@ Challenge: Create a quote generator app, and use React to handle the frontend. D
 -   User story: When I select quote author, I can see a list of quotes from them
 -   User story: I can see quote genre under the author
 
-API: https://pprathameshmore.github.io/QuoteGarden/
-
-Icon: https://google.github.io/material-design-icons/
-
-[Check the design link here](https://www.figma.com/file/FFxqnf1cEDiHhvFpN6u4hV)
-
-As long as you fulfill all the user stories, you can give your personal touches by adding transition, using your own images, changing colors, or even creating your own layout,...
-
-Once you completed, submit your solutions by providing URLs for both GitHub repository and live app on Netlify and explain briefly what you have done.
-
-Good luck everybody!
-
-Template for your readme :
 
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">React Random Quote</h1>
 
 <div align="center">
   <h3>
@@ -55,14 +42,13 @@ Template for your readme :
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![image](./assets/quote1.png)
+![image](./assets/quote1-foc.png)
+![image](./assets/quote2.png)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+-   This demo can be seen on <a href="https://{your-demo-link.your-domain}">Demo</a>
+-   Throughtout making this site, I experirnced using render props
 
--   Where can I see your demo?
--   What was your experience?
--   What have you learned/improved?
--   Your wisdom? :)
 
 ### Built With
 
@@ -73,6 +59,11 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 ## Features
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+The app is displaying a random quote in the first page. 
+
+Users can get a list of quote from the displayed author by cliking at the athor's name
+
+User can get a new quote by cliking the random button
 
 ## How To Use
 
@@ -98,5 +89,5 @@ $ npm start
 ## Contact
 
 -   Website [your-website.com](https://{your-web-site-link})
--   GitHub [@your-username](https://{github.com/your-usermame})
+-   GitHub [@Tsikitsiky](https://{github.com/Tsikitsiky})
 -   Twitter [@your-twitter](https://{twitter.com/your-username})
