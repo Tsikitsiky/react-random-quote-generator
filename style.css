@@ -6,25 +6,51 @@ button, span {
     margin-left: 2rem;
 }
 
+.refresh {
+    background-color: transparent;
+    border: none;
+    padding-right: 2rem;
+    margin-left: 90%;
+    background-image: url(./assets/refresh.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+
 p {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
     padding-left: 2rem;
     border-left: 5px solid sandybrown;
-    max-width: 350px;
+    max-width: 500px;
+    line-height: 43px;
 }
+
+.button-next p {
+    color: #4F4F4F;
+    border: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
 
 .button-next {
-    background-color: #000000;
     color: grey;
-    width: 350px;
-    padding: 2rem;
-    margin-left: 2rem;
+    width: 500px;
+    padding: 2rem 0;
 }
 
-.button-next button {
-    background-color: transparent;
-    border: none;
+.button-next:hover {
+    background-color: #333333;
+    background-image: url(./assets/arrow.svg);
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+}
+
+.button-next:hover p {
     color: #ffffff;
-    font-size: 18px;
 }

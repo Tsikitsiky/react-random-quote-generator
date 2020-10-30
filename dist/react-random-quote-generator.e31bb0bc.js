@@ -33941,7 +33941,9 @@ function App() {
       console.log(quotes);
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/"
-      }, /*#__PURE__*/_react.default.createElement("button", null, "random")), /*#__PURE__*/_react.default.createElement("h1", null, author), /*#__PURE__*/_react.default.createElement("div", null, quotes.map(quote => /*#__PURE__*/_react.default.createElement("p", {
+      }, /*#__PURE__*/_react.default.createElement("button", {
+        className: "refresh"
+      }, "random")), /*#__PURE__*/_react.default.createElement("h1", null, author), /*#__PURE__*/_react.default.createElement("div", null, quotes.map(quote => /*#__PURE__*/_react.default.createElement("p", {
         key: quote.id
       }, quote.quoteText))));
     }
@@ -33970,14 +33972,13 @@ function App() {
 
 
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
-        onClick: newQuote
-      }, "random"), /*#__PURE__*/_react.default.createElement("p", null, quote), /*#__PURE__*/_react.default.createElement("div", {
-        className: "button-next"
-      }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+        onClick: newQuote,
+        className: "refresh"
+      }, "random"), /*#__PURE__*/_react.default.createElement("p", null, quote), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/other"
-      }, /*#__PURE__*/_react.default.createElement("button", {
-        value: author
-      }, author)), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("span", null, genre)));
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "button-next"
+      }, /*#__PURE__*/_react.default.createElement("p", null, author), /*#__PURE__*/_react.default.createElement("span", null, genre))));
     }
   })))));
 }

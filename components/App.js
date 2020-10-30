@@ -34,7 +34,7 @@ function App() {
                         return(
                             <div>
                                 <Link to="/">
-                                    <button>random</button>
+                                    <button className="refresh">random</button>
                                 </Link>
                                 <h1>{author}</h1>
                                 <div>
@@ -70,15 +70,14 @@ function App() {
                         //console.log(quote)
                         return(
                             <div>
-                                <button onClick={newQuote}>random</button>
+                                <button onClick={newQuote} className="refresh">random</button>
                                 <p>{quote}</p>
-                                <div className="button-next">
-                                    <Link to="/other">
-                                        <button value={author}>{author}</button>
-                                    </Link>
-                                    <br />
-                                    <span>{genre}</span>
-                                </div>
+                                <Link to="/other">
+                                    <div className="button-next">
+                                        <p>{author}</p>
+                                        <span>{genre}</span>
+                                    </div>
+                                </Link>
                             </div>
                         )
                     }
