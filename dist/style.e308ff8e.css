@@ -1,0 +1,32 @@
+body > div {
+    margin: auto 3rem;
+}
+
+button, span {
+    margin-left: 2rem;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 2rem;
+    border-left: 5px solid sandybrown;
+    max-width: 350px;
+}
+
+.button-next {
+    background-color: #000000;
+    color: grey;
+    width: 350px;
+    padding: 2rem;
+    margin-left: 2rem;
+}
+
+.button-next button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
