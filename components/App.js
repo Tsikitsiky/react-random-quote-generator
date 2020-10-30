@@ -38,7 +38,7 @@ function App() {
                                 </Link>
                                 <h1>{author}</h1>
                                 <div>
-                                    {quotes.map(quote => <p key={quote.id}>{quote.quoteText}</p>)}
+                                    {quotes.map(quote => <p key={quote.id}>"{quote.quoteText}"</p>)}
                                 </div>
                             </div>
                             
@@ -71,7 +71,7 @@ function App() {
                         return(
                             <div>
                                 <button onClick={newQuote} className="refresh">random</button>
-                                <p>{quote}</p>
+                                <p>"{quote}"</p>
                                 <Link to="/other">
                                     <div className="button-next">
                                         <p>{author}</p>

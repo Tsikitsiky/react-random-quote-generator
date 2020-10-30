@@ -33945,7 +33945,7 @@ function App() {
         className: "refresh"
       }, "random")), /*#__PURE__*/_react.default.createElement("h1", null, author), /*#__PURE__*/_react.default.createElement("div", null, quotes.map(quote => /*#__PURE__*/_react.default.createElement("p", {
         key: quote.id
-      }, quote.quoteText))));
+      }, "\"", quote.quoteText, "\""))));
     }
   })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/"
@@ -33974,7 +33974,7 @@ function App() {
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
         onClick: newQuote,
         className: "refresh"
-      }, "random"), /*#__PURE__*/_react.default.createElement("p", null, quote), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      }, "random"), /*#__PURE__*/_react.default.createElement("p", null, "\"", quote, "\""), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
         to: "/other"
       }, /*#__PURE__*/_react.default.createElement("div", {
         className: "button-next"
